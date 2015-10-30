@@ -1,0 +1,16 @@
+<template name="releaseItem">
+    <div class="row release panel panel-default">
+        <div class="panel-body">
+            <div class="col-xs-2">
+                <img src="https://placeholdit.imgix.net/~text?txtsize=20&txt=150x150&w=150&h=150"/>
+            </div>
+            <div class="release-details col-xs-8">
+                <h2>{{release.name}}</h2>
+                <h3>{{artist}}</h3>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <a href="{{pathFor 'releasePage'}}" class="discuss btn btn-default">Details</a>
+        </div>
+    </div>
+</template>
