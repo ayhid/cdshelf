@@ -1,32 +1,4 @@
-.release-details {
-    float: left;
-    display: block;
+.main.container{
+    margin-top: 7em;
 }
 
-.release-details h2 {
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.release-details h3 {
-    text-transform: capitalize;
-}
-
-ul.release-results {
-    list-style: none;
-    margin-top:20px;
-}
-
-ul.release-results li {
-    border: 1px solid #ddd;
-    margin-bottom: 10px;
-    padding:5px;
-
-}
-ul.release-results li div.release-meta span{
-    display: block;
-    text-transform: uppercase;
-}
-.release-name{
-    font-weight: bold;
-}

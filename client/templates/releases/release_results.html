@@ -1,9 +1,16 @@
 <template name="releaseResults">
-    <div class="row">
-        <ul class="release-results">
+    <div class="ui stackable">
+        <h4 class="ui horizontal divider header">
+            <i class="tag search"></i>
+            We found some releases for your search
+        </h4>
+        <div class="ui divided list-segment items">
             {{#each releases}}
                 {{>releaseResultItem}}
             {{/each}}
-        </ul>
+        </div>
     </div>
 </template>
+
+
+

@@ -15,6 +15,10 @@ Template.releaseResultItem.helpers({
 
     },
 
+    release: function(){
+        return this;
+    },
+
     artistName: function () {
         return _.first(this['artist-credit']).artist.name;
     },
@@ -25,7 +29,11 @@ Template.releaseResultItem.helpers({
 
     format: function () {
         return _.first(this.media).format;
+    },
+    labels:function(){
+        return this['label-info'];
     }
+
 
 });
 
@@ -38,6 +46,7 @@ Template.newRelease.events({
                 Session.set('results', {error: error});
             } else {
 
+                console.log(results);
                 _.each(results.releases, function (release) {
                     Meteor.call('getCoverArt', release.id, function (error, coverArt) {
                         if (error) {

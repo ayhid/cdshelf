@@ -1,15 +1,11 @@
 <template name="newRelease">
-    <form class="main form page">
-        <div class="form-group">
-            <label class="control-label" for="url">BarCode</label>
-            <div class="controls">
-                <input name="barcode" id="barcode" type="text" value="" placeholder="Release barcode
-" class="form-control"/>
-            </div>
+    <form class="ui form">
+        <div class="field">
+            <label>Release Barcode</label>
+            <input type="text" name="barcode" id="barcode" placeholder="888751365520">
         </div>
-        <input type="submit" value="Submit" class="btn btn-primary"/>
-    </form>
-
+        <button class="ui button" type="submit">Go Get It</button>
+        </form>
     {{#with results}}
         <!-- if location has an error property, display it -->
         {{#if error}}

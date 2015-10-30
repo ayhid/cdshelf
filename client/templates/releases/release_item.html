@@ -1,16 +1,27 @@
 <template name="releaseItem">
-    <div class="row release panel panel-default">
-        <div class="panel-body">
-            <div class="col-xs-2">
-                <img src="https://placeholdit.imgix.net/~text?txtsize=20&txt=150x150&w=150&h=150"/>
+
+        <div class="card">
+            <div class="image">
+                <img src="http://placehold.it/350x350">
             </div>
-            <div class="release-details col-xs-8">
-                <h2>{{release.name}}</h2>
-                <h3>{{artist}}</h3>
+            <div class="content">
+                <div class="header">{{release.name}}</div>
+                <div class="meta">
+                    {{artist}}
+                </div>
+                <div class="description">
+                    bla bla
+                </div>
+            </div>
+            <div class="extra content">
+      <span class="right floated">
+        Joined in 2013
+      </span>
+      <span>
+        <i class="user icon"></i>
+        75 Friends
+      </span>
             </div>
         </div>
-        <div class="panel-footer">
-            <a href="{{pathFor 'releasePage'}}" class="discuss btn btn-default">Details</a>
-        </div>
-    </div>
+
 </template>

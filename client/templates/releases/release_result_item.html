@@ -1,19 +1,26 @@
 <template name="releaseResultItem">
-    <li class="col-xs-6 col-sm-6 col-md-6">
-        <div class="row">
-            <div class="col-xs-2 col-sm-2 col-md-3">
-                <img src="{{thumbnail}}" alt="{{artistName}}: {{this.title}}" class="img-thumbnail" width="80" height="80">
+    <div class="item">
+        <div class="image">
+            <img src="{{thumbnail}}" alt="{{artistName}}: {{this.title}}">
+        </div>
+        <div class="content">
+            <a class="header">{{title}} </a>
+            <div class="meta">
+                <span>{{artistName}}</span>
             </div>
-            <div class="col-xs-4 col-sm-4 col-md-6 release-meta">
-                <span class="release-name">{{title}}</span>
-                <span class="artist-name">{{artistName}}</span>
-                <span class="release-format">{{format}}({{trackCount}})</span>
+            <div class="description">
+                <span>Tracks:{{trackCount}}</span>
+                    {{>labels labels}}
             </div>
-            <div class="col-xs-2 col-sm-2 col-md-3">
-                <button type="button" class="btn btn-success btn-xs add-to-collection" release-mbid="{{id}}">
-                    <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> add to collection
-                </button>
+            <div class="extra">
+                <div class="ui label">{{format}}</div>
+                <div class="ui label">{{release.packaging}}</div>
+                <div class="ui label"><i class="globe icon"></i></div>
+                <div class="ui right floated primary button">
+                    add to collection
+                    <i class="right add icon"></i>
+                </div>
             </div>
         </div>
-    </li>
+    </div>
 </template>
